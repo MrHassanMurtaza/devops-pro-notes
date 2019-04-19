@@ -5,7 +5,6 @@ These are my study notes for the AWS DevOps - Professional certification. I inte
 Table of Contents
 =================
 
-* [Dummy Heading](#Dummy-Heading)
 * [A/B Testing and Blue/Green Deployments](#A/B-Testing-and-Blue/Green-Deployments)
 
 # A/B-Testing-and-Blue/Green-Deployments
