@@ -5,7 +5,7 @@ These are my study notes for the AWS DevOps - Professional certification. I inte
 Table of Contents
 =================
 
-* [Dummy Heading](#Dummy Heading)
+* [Dummy_Heading](#Dummy Heading)
 
 # Dummy Heading
 
