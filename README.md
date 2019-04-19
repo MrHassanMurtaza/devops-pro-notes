@@ -32,3 +32,7 @@ Table of Contents
 - Then we have to change our launch configuration of production ASG to Green from Blue.
 - Old instances with old launch configurations will stay the same. What you need to do is to double the size of instances so that you provision new instances with new launch configurations. 
 - After launching new instances we can change our ASG to previous size of instances. This way, our old instances will get terminated depending on our ASG policy. 
+
+### → A/B Testing 
+- Comparing two versions of application to see which one performs better.
+- Example would be, you hosting two applications on S3 and serving using Route53 weighted policies. Then you can see conversion rate to determine which one is performing better. 
