@@ -24,3 +24,11 @@ Table of Contents
 - We can just edit Load Balancer and attach Green ASG to our load balancer. 
 - We can control the amount of traffic by altering number of instances in blue and green ASGs e.g. if Green ASG is scaled up to the size we want, we can decommission the Blue ASG by setting the instances size to 0.
 - Traffic shift is quicker but we won't have a fine grain control over traffic weightage. 
+
+### → Update ASG Launch Configurations
+- Again the case where you can't or don't want to use DNS for B/G deployments.
+- We'll update launch configurations to do B/G deploymenets.
+- We'll have on blue launch configuration and one green launch configuration. 
+- Then we have to change our launch configuration of production ASG to Green from Blue.
+- Old instances with old launch configurations will stay the same. What you need to do is to double the size of instances so that you provision new instances with new launch configurations. 
+- After launching new instances we can change our ASG to previous size of instances. This way, our old instances will get terminated depending on our ASG policy. 
