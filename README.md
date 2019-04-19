@@ -5,8 +5,8 @@ These are my study notes for the AWS DevOps - Professional certification. I inte
 Table of Contents
 =================
 
-* [BlueGreen](#BlueGreen)
+* [BlueGreen](#A/B Testing and Blue/Green Deployments)
 
-# BlueGreen
+# A/B Testing and Blue/Green Deployments
 
 
