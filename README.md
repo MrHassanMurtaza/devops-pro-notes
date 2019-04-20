@@ -39,3 +39,13 @@ Table of Contents
 - Example would be, you hosting two applications on S3 and serving using Route53 weighted policies. Then you can see conversion rate to determine which one is performing better. 
 
 # Introduction-to-Elastic-Beanstalk
+- Elastic BeanStalk reduces management complexity without restricting choice or control. You just need to upload application and elastic beanstalk will take care of capacity provision, load balancing, scaling and monitoring etc. 
+- Developers friendly. 		 	
+- Supported runtime includes java, .Net, PHP, NodeJS, Python, Ruby and Go. Supported webservers are Apache, IIS, Nginx, Passenger Puma, Tomcat and Docker.
+- Used when you want to spend minimal time learning/configuring infrastructure. For quick prototyping and testing. 
+- You wouldn't want to use it when you need complete control over resources. Complicated if you have a lot of dependencies i.e. configurations (ops work is the best fit). May not fit for existing applications.
+- Elastic beanstalk components: 1. Application - the collection of components such as environments, versions and configurations. 2. Application Verson: part of an app. Can have multiple versions
+- Environment - Version that is deployed with AWS resources. 
+- Environment Configuration - Setting and parameters that defines our environment. 
+- Configuration template - Used to create repeatable environments configurations.
+
