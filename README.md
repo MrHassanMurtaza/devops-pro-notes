@@ -49,3 +49,22 @@ Table of Contents
 - Environment Configuration - Setting and parameters that defines our environment. 
 - Configuration template - Used to create repeatable environments configurations.
 
+### → Deployment Strategies for Elastic Beanstalk
+- All at once: Update all instances at the same time with an in-place update. 
+Pros - Fastest Method, Required no DNS change.
+Cons - Can cause downtime. 
+on Deployment Failure - Re deploy a working version.
+- Rolling: 
+Pros - Prevent downtime because of having control over number of instances. Uses Health Checks when re-attaching to ELB and Requires no DNS changes.   
+Cons - On deployment failure, we'll have to manually terminate the instances and let elastic beanstalk deploy last successful version of the application. 
+- Rolling with Additional Batch: Updates one batch of instances at a time. Starting with new batch of instances first. 
+Pros - Same pros as Rolling deployments with out capacity reduction e.g. number of instances as a time. 
+Cons - Takes more time than rolling updates. On deployment failure, re-deploy with another rolling additional batch deployment. Hybrid. 
+- Immutable: If you want brand new instances, with out replacing batch by batch for some reasons, Immutable strategy is the way to go. It replaces existing instances with new instances by creating a temporary autoscaling group and it test one new application and configuration. Then, add it to orignal auto scaling group by terminating old auto scaling group. 
+Pros - Prevents downtime. Use new resources.  In place updates with clean rollback as we are not doing anything to original instances without testing.
+Cons - Doubles the number of instances for short period of time. On deployment failure, it terminates temporary ASG and re deploy.
+- Blue/Green: Replaces all the resources including ELB, ASG and instances. 
+Pros - Prevents downtime, uses new instances instead of in place updates and test updates on a seperate environment we call Green.
+Cons - Requires DNS Change - doubles the number of instances. On deployment failures, swap urls. 
+
+Apply to updating our environment or rolling back to the previous version. 
