@@ -80,3 +80,8 @@ Apply to updating our environment or rolling back to the previous version.
 - Saved Configurations are stored in S3. These are Yml or JSON files and can be applied to new or existing environment. 
 - Anatomy of Configuration Files: 1. option_settings: values for configuration settings. Can configure eb environment, AWS resources in our environment and software on instances. 2. resources: lets you customize the resources. 3. other sections: Commands, Container commands, users etc. 
 - Presidence: Direct changes have the highest precidence. Saved Configurations have the next highest. Configuration files has the lowest precidence. 
+### → Elastic Beanstalk with CloudFormation
+- CloudFormation: Controlled way to model and provision resources. Infrastructure as a code. 
+- Elastic Beanstalk: Easily deploy and scale application without worrying about underlying resources.
+- Use CloudFormation for infrastructure management and elastic beanstalk for configurations.
+
