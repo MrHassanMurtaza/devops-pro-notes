@@ -72,4 +72,11 @@ Apply to updating our environment or rolling back to the previous version.
 ### → Docker Deployments with Elastic Beanstalk
 - Allow us a way to package application and all of its dependencies in a virtual container. 
 - It gives us consistency across environments and platforms. Especially when youu're migrating your application from lets say on premise to cloud. 
-- Two Configurations of Docker with Elastic Beanstalk: Single Container: Used to deploy a docker image and source code inside a single container (Dockerfile is required & Dockerrun.aws.json is optional). Multi Container: Use to deploy multiple containers per instance. ECS is used to deploy cluster in EB environment. E.g. Nginx in one container and Application in another container (both Dockerfile & Dockerrun.aws.json is required). 
+- Two Configurations of Docker with Elastic Beanstalk: Single Container: Used to deploy a docker image and source code inside a single container (Dockerfile is required & Dockerrun.aws.json is optional). Multi Container: Use to deploy multiple containers per instance. ECS is used to deploy cluster in EB environment. E.g. Nginx in one container and Application in another container (both Dockerfile & Dockerrun.aws.json is required).
+
+### → Elastic Beanstalk Environment Configurations
+- Ways to do Elastic Beanstalk Configurations: 1. Configuration Files (in .ebextensions), Saved Configurations, Direct Changes). 
+- Configuration Files are added to the root of our application bundle in .ebextensions folder. 
+- Saved Configurations are stored in S3. These are Yml or JSON files and can be applied to new or existing environment. 
+- Anatomy of Configuration Files: 1. option_settings: values for configuration settings. Can configure eb environment, AWS resources in our environment and software on instances. 2. resources: lets you customize the resources. 3. other sections: Commands, Container commands, users etc. 
+- Presidence: Direct changes have the highest precidence. Saved Configurations have the next highest. Configuration files has the lowest precidence. 
