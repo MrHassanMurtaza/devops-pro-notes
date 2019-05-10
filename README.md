@@ -68,3 +68,8 @@ Pros - Prevents downtime, uses new instances instead of in place updates and tes
 Cons - Requires DNS Change - doubles the number of instances. On deployment failures, swap urls. 
 
 Apply to updating our environment or rolling back to the previous version. 
+
+### → Docker Deployments with Elastic Beanstalk
+- Allow us a way to package application and all of its dependencies in a virtual container. 
+- It gives us consistency across environments and platforms. Especially when youu're migrating your application from lets say on premise to cloud. 
+- Two Configurations of Docker with Elastic Beanstalk: Single Container: Used to deploy a docker image and source code inside a single container (Dockerfile is required & Dockerrun.aws.json is optional). Multi Container: Use to deploy multiple containers per instance. ECS is used to deploy cluster in EB environment. E.g. Nginx in one container and Application in another container (both Dockerfile & Dockerrun.aws.json is required). 
