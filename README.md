@@ -84,4 +84,6 @@ Apply to updating our environment or rolling back to the previous version.
 - CloudFormation: Controlled way to model and provision resources. Infrastructure as a code. 
 - Elastic Beanstalk: Easily deploy and scale application without worrying about underlying resources.
 - Use CloudFormation for infrastructure management and elastic beanstalk for configurations.
-
+### → Elastic Beanstalk with RDS
+- Elastic Beanstalk provides support for running RDS in EB environment. Which is great for test and development environment. 
+- This option is not ideal since it ties the lifecycle of database with our application. Although, we can create a snapshot prior to termination.- Using seperate RDS in EB allow us to use single rds instance in multiple environments.
