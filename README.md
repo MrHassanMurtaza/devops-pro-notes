@@ -102,5 +102,5 @@ Instance Protection: Protect new launched instances on scale in event. So termin
 Why Suspending Processes: Investigation and Troubleshooting. 
 - Lifecycle Hooks: It solves a problem when we're deploying to instances and deployment is taking longer than expected. Such as instance may get healthy and inservice before deployment is complete.
 Pending Wait State, Pending Proceed Sttate, Terminate wait, Terminate Proceed. 
-- ASG API, CLI, SDK
-- SQS with Autoscaling
+- ASG API, CLI, SDK - AWS SDK (underscore usually), API (upper camel case) and CLI (hyphons) naming convention is different. Some of CLI commands are: aws autoscaling create-auto-scaling-group --, aws autoscaling create-launch-configurations --, aws autoscaling describe-launch-configurations --, aws autoscaling describe-auto-scaling-groups --. Some of APIs are CreateAutoScalingGroup, CreateLaunchConfiguration.   
+- SQS with Autoscaling - Scale In and Scale Out autoscaling group based on number of values in SQS Queue. Create Scaling Policies >> Trigger it using Cloud Watch Alarms >> which itself will be triggered by SQS. 
