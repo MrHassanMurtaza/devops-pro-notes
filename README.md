@@ -100,6 +100,7 @@ Note: Autoscaling will always check about availability and then apply custom ter
 Instance Protection: Protect new launched instances on scale in event. So termination policies will not apply on such instance.
 - Suspending Processes: Following ASG Processes - 1. Launch 2. Terminate 3. Health Check 4. Replace Unhealthy 5. AZ Rebalance 6. AlarmNotification 7. ScheduledActions 8. AddToLoadBalancer. 
 Why Suspending Processes: Investigation and Troubleshooting. 
-- Lifecycle Hooks
+- Lifecycle Hooks: It solves a problem when we're deploying to instances and deployment is taking longer than expected. Such as instance may get healthy and inservice before deployment is complete.
+Pending Wait State, Pending Proceed Sttate, Terminate wait, Terminate Proceed. 
 - ASG API, CLI, SDK
 - SQS with Autoscaling
