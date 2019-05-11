@@ -6,8 +6,8 @@ Table of Contents
 =================
 
 * [A/B Testing and Blue/Green Deployments](#A/B-Testing-and-Blue/Green-Deployments)
-* [Introduction to Elastic Beanstalk](#Introduction-to-Elastic-Beanstalk)
-* [Autoscaling_Concepts](#Autoscaling-Concepts)
+* [Introduction to Elastic Beanstalk](#Introduction-to-Elastic-Beanstalk) 
+* [Autoscaling Concepts](#Autoscaling-Concepts)
 
 # A/B-Testing-and-Blue/Green-Deployments
 - Blue/Green deployment (Blue is current running version, Green env running different version of application) is the technique we use for releasing application by shifting traffic between two identical environments running different versions of the application. Advantage: Avoid downtime (near zero downtime), Convinent in rollback.  
