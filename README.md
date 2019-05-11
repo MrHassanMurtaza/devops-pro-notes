@@ -90,3 +90,15 @@ Apply to updating our environment or rolling back to the previous version.
 - This option is not ideal since it ties the lifecycle of database with our application. Although, we can create a snapshot prior to termination.- Using seperate RDS in EB allow us to use single rds instance in multiple environments.
 
 # Autoscaling-Concepts
+- Termination Policies - 
+Oldest Instance: This is useful when upgrading ec2 instance to new ec2 instance type. 
+NewestInstance: Terminate newest instance. When you are testing new configuration but do not want to use it in production. 
+OldestLaunchConfiguration: Terminate instances with lowest launch configuration.This is useful when updating launch configurations.
+ClosestToNextInstanceHour: Terminate the instance closest to next billing hour of instance. Cost saving.
+Default: Check Multi AZ >> Select AZ with most instances >> Select Oldest Launch Configuration Instaces >> Select Closest To Billing Hour >> Select at Random >> Terminate 
+Note: Autoscaling will always check about availability and then apply custom termination policy on az which have more instances.
+Instance Protection: Protect new launched instances on scale in event. So termination policies will not apply on such instance.
+- Suspending Processes
+- Lifecycle Hooks
+- ASG API, CLI, SDK
+- SQS with Autoscaling
