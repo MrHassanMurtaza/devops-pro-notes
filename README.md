@@ -98,7 +98,8 @@ ClosestToNextInstanceHour: Terminate the instance closest to next billing hour o
 Default: Check Multi AZ >> Select AZ with most instances >> Select Oldest Launch Configuration Instaces >> Select Closest To Billing Hour >> Select at Random >> Terminate 
 Note: Autoscaling will always check about availability and then apply custom termination policy on az which have more instances.
 Instance Protection: Protect new launched instances on scale in event. So termination policies will not apply on such instance.
-- Suspending Processes
+- Suspending Processes: Following ASG Processes - 1. Launch 2. Terminate 3. Health Check 4. Replace Unhealthy 5. AZ Rebalance 6. AlarmNotification 7. ScheduledActions 8. AddToLoadBalancer. 
+Why Suspending Processes: Investigation and Troubleshooting. 
 - Lifecycle Hooks
 - ASG API, CLI, SDK
 - SQS with Autoscaling
